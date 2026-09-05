@@ -1,0 +1,322 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+}
+#container-of-form-validation {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  gap: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvv styles helpfully vvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+.style-of-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: solid 0.4px rgb(36, 35, 35);
+  box-shadow: 1px 6px 6px 1px rgba(50, 50, 50, 0.5);
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.style-of-section:hover {
+  transform: scale(1.01);
+}
+
+.head-of-section {
+  width: 100%;
+  height: 100px;
+  background-color: darkred;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  border: solid 0.7px rgb(50, 50, 50);
+}
+
+.title-style {
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 2px 4px 10px rgba(40, 0, 0, 0.4);
+  color: white;
+}
+
+.body-of-section {
+  width: 700px;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+}
+
+.align-items {
+  display: flex;
+  gap: 10px;
+  margin: 0.3rem 0;
+  flex-direction: column;
+}
+
+.text-style {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 1px 4px 4px 1px rgba(50, 50, 50, 0.5);
+}
+
+.input-style {
+  height: 23px;
+  width: 8em;
+}
+
+.container-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container-of-yes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-top: 8px;
+}
+
+.body-of-section h2 {
+  margin: 0 auto;
+  font-size: 30px;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+.alert-p {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  text-shadow: 1px 2px 2px 1px rgba(100, 100, 100, 0.3);
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.style-of-options {
+  width: 4.8rem;
+  height: 26px;
+  font-size: 15px;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ styles helpfully ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvv CONTAINERS vvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#first-container-title {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^ CONTAINERS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*111111111111111111111111111 FIRST SECTION STYLE 1111111111111111111111111*/
+
+#head-of-first-section {
+  height: auto;
+}
+
+/*111111111111111111111111111 FIRST SECTION STYLE 11111111111111111111１１１１１*/
+
+/*22222222222222222222222222 SECOND SECTION STYLE 2222222222222222222222222*/
+
+#p-style-of-title {
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 2px 4px 7px rgba(40, 0, 0, 0.4);
+  color: white;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#container-date-of-birth {
+  margin-top: 1.5rem;
+}
+
+#age {
+  width: 3rem;
+}
+
+#gender {
+  width: 4.8rem;
+  height: 26px;
+  font-size: 15px;
+}
+
+/*2222222222222222222222222 SECOND SECTION STYLE 2222222222222222222222222222 */
+
+/*333333333333333333333333 THIRD SECTION STYLE 333333333333333333333333333333 */
+
+#email-address {
+  height: 25px;
+  width: 13rem;
+}
+
+#home-address {
+  min-width: 150px;
+  min-height: 60px;
+  resize: both;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+/*333333333333333333333333 THIRD SECTION STYLE 333333333333333333333333333333 */
+
+/*44444444444444444444444 FOURTH SECTION STYLE 444444444444444444444444444444 */
+
+#id-number {
+  width: 9rem;
+  height: 23px;
+  box-shadow: 1px 2px 2px 1px rgba(50, 50, 50, 0.5);
+}
+
+#identification-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/*44444444444444444444444 FOURTH SECTION STYLE 444444444444444444444444444444 */
+
+/*55555555555555555555555 FIFTH SECTION STYLE 5555555555555555555555555555555 */
+
+#select-kind-of-degree {
+  width: 13rem;
+  height: 25px;
+}
+
+#input-of-degree {
+  width: 12rem;
+  height: 23px;
+  margin-top: 10px;
+}
+
+/* when the user click an option it gonna display more form to refil if he click another option distint that is gonna display more forms to refil for info*/
+/*55555555555555555555555 FIFTH SECTION STYLE 5555555555555555555555555555555 */
+
+/*6666666666666666666666 SIXTH SECTION STYLE 66666666666666666666666666666666 */
+
+#license-number {
+  width: 10rem;
+  height: 1.2rem;
+}
+
+/*6666666666666666666666 SIXTH SECTION STYLE 66666666666666666666666666666666 */
+
+/*777777777777777777777 seventh section style 777777777777777777777777777777 */
+
+#years-experience {
+  width: 2rem;
+}
+
+/*777777777777777777777 seventh section style 777777777777777777777777777777 */
+
+/*888888888888888888888 eigth section style 88888888888888888888888888888888 */
+
+#pharmacy-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*888888888888888888888 eigth section style 88888888888888888888888888888888 */
+
+/*999999999999999999999 NINTH SECTION STYLE 99999999999999999999999999999999 */
+
+#container-of-lenguage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#container-other-lenguage {
+  display: flex;
+  gap: 5px;
+}
+
+#input-of-lenguage {
+  width: 8rem;
+  height: 1.2rem;
+}
+
+/*999999999999999999999 NINTH SECTION STYLE 99999999999999999999999999999999 */
+
+/*1010101010101010101010 TENTH SECTION STYLE 1010101010101010101010101010010 */
+
+#tenth-head-of-section {
+  background-color: green;
+}
+
+#condition-before-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+#submit-all-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  align-items: flex-start;
+  width: auto;
+  padding: 0 3rem;
+}
+
+#date-of-submit {
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+#button-submit {
+  padding: 1rem 1.5rem;
+  background-color: rgb(2, 165, 2);
+  color: white;
+  text-shadow: 1px 2px 2px 1px #96969666;
+  box-shadow: 1px 4px 4px 1px rgba(100, 100, 100, 0.4);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 900;
+  border-radius: 5px;
+  width: auto;
+  align-self: center;
+  background-color: rgb(2, 115, 2);
+}
+
+#button-submit:hover {
+  box-shadow: 1px 5px 5px 1px rgba(70, 70, 70, 0.5);
+  transform: scale(1.01);
+}
+
+#button-submit:active {
+  transform: scale(0.97);
+}
+
+#p-agree-to-submit {
+  align-self: center;
+}
+
+/*1010101010101010101010 TENTH SECTION STYLE 1010101010101010101010101010010 */
