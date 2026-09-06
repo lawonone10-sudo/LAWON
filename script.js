@@ -56,9 +56,28 @@ function setupValidation(
   });
 }
 
-function leverToDeploy() {
-  array.forEach((element) => {});
+
+function haveInfoYesOrNo (
+  yes,
+  no,
+  container
+) {
+
+  yes.addEventListener("change", () => {
+
+    container.style.display = "flex";
+
+  })
+
+  no.addEventListener("change", () => {
+
+    container.style.display = "none";
+
+  })
+
+
 }
+
 // goal: now how reusable the function and how does that work how to code it.
 
 //---------------------------------------- Reasuble function ------------------------------------------------------
@@ -272,39 +291,53 @@ setupValidation(
 
 //--------------------------------------- fourth section  ---------------------------------------------------------4 Identification
 
-const identifications = document.querySelectorAll("#driver's-license, #State-ID, #passport");
-const idContainer = document.querySelector("#container-id-number");
+const typesOfID = document.querySelectorAll("input[name='types-of-id']");
+const collectID = document.querySelector("#container-id-number");
 
-let IDtoggle = false;
-identifications.forEach(identification => {
+typesOfID.forEach(id => {
 
-  identification.addEventListener("change",() => {
+   id.addEventListener("change", () => {
 
-    if(idContainer.classList.includes("hidden")) {
-      idContainer.classList.add = "hidden";
-    }
-    idContainer.classList.remove = "hidden";
-
-  })
+  collectID.style.display = "block"; 
 
 })
-
+})
 
 //--------------------------------------- fourth section  ---------------------------------------------------------
 
 //--------------------------------------- fifth section  ---------------------------------------------------------5 Education
+
+const graduateYes = document.querySelector("#graduate-yes");
+const graduateNo = document.querySelector("#graduate-no");
+const graduationInfo = document.querySelector("#graduation-information");
+
+haveInfoYesOrNo (
+  graduateYes,
+  graduateNo,
+  graduationInfo
+) 
+
+
 //--------------------------------------- fifth section  ---------------------------------------------------------
 
 //--------------------------------------- sixth section  ---------------------------------------------------------6 Pharmacy License
+
+
+
 //--------------------------------------- sixth section  ---------------------------------------------------------
 
 //--------------------------------------- seventh section  ---------------------------------------------------------7 Work Experience
+
+
 //--------------------------------------- seventh section  ---------------------------------------------------------
 
 //--------------------------------------- eighth section  ---------------------------------------------------------8 Skills
+
+
 //--------------------------------------- eighth section  ---------------------------------------------------------
 
 //--------------------------------------- ninth section  ---------------------------------------------------------9 Languages
+
 //--------------------------------------- ninth section  ---------------------------------------------------------
 
 //--------------------------------------- tenth section  ---------------------------------------------------------10 Final Review & Submit

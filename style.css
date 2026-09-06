@@ -52,7 +52,7 @@ body {
 .body-of-section {
   width: 700px;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -84,15 +84,13 @@ body {
   justify-content: center;
 }
 
-.hidden {
-  display: none !important;
-}
+
 
 .container-of-yes {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
-  margin-top: 8px;
+  margin-top: 1rem;
 }
 
 .body-of-section h2 {
@@ -118,6 +116,8 @@ body {
   height: 26px;
   font-size: 15px;
 }
+
+
 
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^ styles helpfully ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
@@ -186,9 +186,14 @@ body {
 
 /*44444444444444444444444 FOURTH SECTION STYLE 444444444444444444444444444444 */
 
+#container-id-number {        
+  display: none;
+}
+
+
 #id-number {
   width: 9rem;
-  height: 23px;
+  height: 15px;
   box-shadow: 1px 2px 2px 1px rgba(50, 50, 50, 0.5);
 }
 
@@ -196,6 +201,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 /*44444444444444444444444 FOURTH SECTION STYLE 444444444444444444444444444444 */
@@ -211,6 +217,10 @@ body {
   width: 12rem;
   height: 23px;
   margin-top: 10px;
+}
+
+#graduation-information {
+  display: none;
 }
 
 /* when the user click an option it gonna display more form to refil if he click another option distint that is gonna display more forms to refil for info*/

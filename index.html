@@ -170,21 +170,22 @@
               <h2>Identification Type *</h2>
               <div id="identification-type">
                 <label class="text-style" for="driver's-license">
-                  <input name="id-type" id="driver's-license" type="radio" />
+                  <input name="types-of-id" id="driver's-license" type="radio" />
                   Driver's License
                 </label>
 
                 <label class="text-style" for="State-ID">
-                  <input name="id-type" id="State-ID" type="radio" />
-                  State ID
+                  <input name="types-of-id" id="State-ID" type="radio" />
+                  State ID 
                 </label>
 
                 <label class="text-style" for="passport">
-                  <input name="id-type" id="passport" type="radio" />
+                  <input name="types-of-id" id="passport" type="radio" />
                   Passport
                 </label>
-              </div> 
-              <div id="container-id-number" class="hidden">
+              </div>  
+
+              <div id="container-id-number">
                 <label class="text-style" for="id-number">ID Number</label>
                 <input
                 name="id-type"
@@ -219,7 +220,7 @@
                   No
                 </label>
               </div>
-              <div class="container-of-yes hidden">
+              <div id="graduation-information" class="container-of-yes">
                 <label class="text-style" for="university-name">
                   University Name *
                   <input
@@ -230,6 +231,7 @@
                     required
                   />
                 </label>
+              <div id="container-of-kind-of-degree">
                 <label class="text-style" for="select-kind-of-degree"
                   >Degree *</label
                 >
@@ -241,6 +243,9 @@
                   <option>Master's Degree</option>
                   <option id="other-kind-of-degree">Other</option>
                 </select>
+              </div>
+            
+
                 <div id="container-of-specify-degree" class="hidden">
                   <label class="text-style" for="input-of-degree"
                     >Please specify your degree</label
