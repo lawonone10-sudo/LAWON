@@ -188,6 +188,8 @@ body {
 
 #container-id-number {        
   display: none;
+  flex-direction: column;
+  gap: 8px;
 }
 
 
@@ -233,12 +235,23 @@ body {
   height: 1.2rem;
 }
 
+#extra-form-pharmacy-license {
+  display: none;
+
+}
+
+
 /*6666666666666666666666 SIXTH SECTION STYLE 66666666666666666666666666666666 */
 
 /*777777777777777777777 seventh section style 777777777777777777777777777777 */
 
 #years-experience {
   width: 2rem;
+}
+
+#form-of-work-experience {
+  display: none;
+  margin-top: 1rem;
 }
 
 /*777777777777777777777 seventh section style 777777777777777777777777777777 */

@@ -298,10 +298,26 @@ typesOfID.forEach(id => {
 
    id.addEventListener("change", () => {
 
-  collectID.style.display = "block"; 
+  collectID.style.display = "flex"; 
 
 })
 })
+
+const idNumber = document.querySelector("#id-number");
+const alertIdNumber = document.querySelector("#alert-id-number");
+
+setupValidation(
+  idNumber,
+  alertIdNumber,
+  "Please, enter your id",
+  15,
+  "id too large",
+  4,
+  "id too short",
+  "@",
+  "",
+)
+
 
 //--------------------------------------- fourth section  ---------------------------------------------------------
 
@@ -317,16 +333,49 @@ haveInfoYesOrNo (
   graduationInfo
 ) 
 
+const universityName = document.querySelector("#university-name");
+const alertUniversityName = document.querySelector("#alert-university-name");
+
+setupValidation(
+  universityName,
+  alertUniversityName,
+  "Please, enter the name of your college",
+  50,
+  "Text too large",
+  2,
+  "Text to short",
+  "@$",
+  "",
+) 
 
 //--------------------------------------- fifth section  ---------------------------------------------------------
 
+
 //--------------------------------------- sixth section  ---------------------------------------------------------6 Pharmacy License
 
+const pharmacyLicenseYes = document.querySelector("#yes-pharmacy-license");
+const pharmacyLicenseNo = document.querySelector("#no-pharmacy-license");
+const formOfPharmacyLicense = document.querySelector("#extra-form-pharmacy-license");
 
+haveInfoYesOrNo (
+  pharmacyLicenseYes,
+  pharmacyLicenseNo,
+  formOfPharmacyLicense
+) 
 
 //--------------------------------------- sixth section  ---------------------------------------------------------
 
 //--------------------------------------- seventh section  ---------------------------------------------------------7 Work Experience
+
+const workExperienceYes = document.querySelector("#yes-work-experience");
+const workExperienceNo = document.querySelector("#no-work-experience");
+const formOfWorkExperience = document.querySelector("#form-of-work-experience");
+
+haveInfoYesOrNo (
+  workExperienceYes,
+  workExperienceNo,
+  formOfWorkExperience
+) 
 
 
 //--------------------------------------- seventh section  ---------------------------------------------------------

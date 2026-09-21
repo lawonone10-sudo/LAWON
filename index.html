@@ -186,13 +186,16 @@
               </div>  
 
               <div id="container-id-number">
-                <label class="text-style" for="id-number">ID Number</label>
-                <input
-                name="id-type"
-                 id="id-number"
-                placeholder="Enter your ID number"
-                />
-              </div>
+                <label class="text-style" for="id-number">ID Number
+                  <input
+                    name="id-type"
+                     id="id-number"
+                     type="number"
+                    placeholder="Enter your ID number"
+                  />
+                </label>
+                <p id="alert-id-number" class="alert-p"></p>   
+              </div>     
             </div>
           </section>
 
@@ -231,6 +234,8 @@
                     required
                   />
                 </label>
+                <p id="alert-university-name" class="alert-p"></p>
+
               <div id="container-of-kind-of-degree">
                 <label class="text-style" for="select-kind-of-degree"
                   >Degree *</label
@@ -241,12 +246,12 @@
                   <option>Pharmacy Technician Certificate</option>
                   <option>Associate Degree</option>
                   <option>Master's Degree</option>
-                  <option id="other-kind-of-degree">Other</option>
+                  <option value="other-kind-of-degree">Other</option>
                 </select>
               </div>
             
 
-                <div id="container-of-specify-degree" class="hidden">
+                <div id="container-of-specify-degree" >
                   <label class="text-style" for="input-of-degree"
                     >Please specify your degree</label
                   >
@@ -267,7 +272,7 @@
                 <label class="text-style" for="yes-pharmacy-license">
                   <input
                     name="pharmacy-license"
-                    id="yes-pharmacy=license"
+                    id="yes-pharmacy-license"
                     type="radio"
                   />Yes
                 </label>
@@ -280,7 +285,7 @@
                   />No
                 </label>
               </div>
-              <div class="container-of-yes hidden">
+              <div id="extra-form-pharmacy-license" class="container-of-yes">
                 <label class="text-style" for="license-number">
                   License Number *
                   <input
@@ -311,7 +316,7 @@
                 <label class="text-style" for="yes-work-experience">
                   <input
                     name="work-experience?"
-                    id="yes=work-experience"
+                    id="yes-work-experience"
                     type="radio"
                   />
                   Yes
@@ -326,7 +331,7 @@
                   No
                 </label>
               </div>
-              <div class="container-of-yes hidden">
+              <div id="form-of-work-experience">
                 <label class="text-style" for="pharmacy-name">
                   Pharmacy Name *
                   <input
