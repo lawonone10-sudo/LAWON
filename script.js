@@ -540,6 +540,16 @@ haveInfoYesOrNo (
 
 //--------------------------------------- ninth section  ---------------------------------------------------------9 Languages
 
+const otherLanguage = document.querySelector("#other-language");
+const inputOfLanguage = document.querySelector("#input-of-language");
+
+otherLanguage.addEventListener("change", () => {
+
+  inputOfLanguage.classList.toggle("hidden", !otherLanguage.checked);
+})
+
+
+
 //--------------------------------------- ninth section  ---------------------------------------------------------
 
 //--------------------------------------- tenth section  ---------------------------------------------------------10 Final Review & Submit
