@@ -22,7 +22,8 @@
             <div class="head-of-section">
               <h1 class="title-style">👤 Personal Information</h1>
             </div>
-            <div class="body-of-section">
+
+            <div class="body-of-section">         
               <div class="align-items">
                 <label class="text-style field-required" for="first-name"
                   >First Name *
@@ -242,7 +243,7 @@
                 >
                 <select id="select-kind-of-degree" required>
                   <option>Doctor of Pharmacy (PharmD)</option>
-                  <option>Bachelor of Science in Pharmacy</option>
+                  <option>Bachelor of Science in Pharmacy</option> 
                   <option>Pharmacy Technician Certificate</option>
                   <option>Associate Degree</option>
                   <option>Master's Degree</option>
@@ -251,12 +252,13 @@
               </div>
             
 
-                <div id="container-of-specify-degree" >
+                <div id="container-of-specify-degree" class="hidden">
                   <label class="text-style" for="input-of-degree"
                     >Please specify your degree</label
                   >
                   <br />
-                  <input name="input-of-degree" id="input-of-degree" />
+                  <input id="input-of-degree" />
+                  <p id="alert-input-of-degree" class="alert-p"></p>
                 </div>
               </div>
             </div>
@@ -293,7 +295,9 @@
                     id="license-number"
                     placeholder="Example: RPH987654"
                   />
+                  <p id="alert-license-number" class="alert-p"></p>
                 </label>
+                
                 <label class="text-style" for="PL-expiration">
                   Date Expiration *
                   <input
@@ -301,6 +305,8 @@
                     id="date-expiration"
                     type="date"
                   />
+
+                  <p id="alert-date-expiration" class="alert-p"></p>
                 </label>
               </div>
             </div>
@@ -341,7 +347,10 @@
                     type="text"
                     placeholder="Pharmacy"
                   />
+                  <p id="alert-pharmacy-name" class="alert-p"></p>
                 </label>
+                
+                
                 <label class="text-style" for="position">
                   Position *
                   <input
@@ -351,6 +360,7 @@
                     class="input-style"
                     placeholder="manager"
                   />
+                  <p id="alert-position" class="alert-p"></p>
                 </label>
                 <label class="text-style" for="years-experience">
                   Years Experience *
@@ -359,6 +369,7 @@
                     id="years-experience"
                     type="number"
                   />
+                  <p id="alert-years-experience" class="alert-p"></p>
                 </label>
               </div>
             </div>

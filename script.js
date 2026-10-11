@@ -347,6 +347,39 @@ setupValidation(
   "@$",
   "",
 ) 
+ 
+const selectKindOfDegree = document.querySelector("#select-kind-of-degree");
+const containerOfSpecifyDegree = document.querySelector("#container-of-specify-degree");
+
+selectKindOfDegree.addEventListener("change", () => {
+
+  if (selectKindOfDegree.value === "other-kind-of-degree") {
+
+    containerOfSpecifyDegree.classList = ""
+  }
+  if (selectKindOfDegree.value !== "other-kind-of-degree") {
+
+    containerOfSpecifyDegree.classList = "hidden";
+  }
+})
+
+const inputOfDegree = document.querySelector("#input-of-degree");
+const alertInputOfDegree = document.querySelector("#alert-input-of-degree");
+
+
+setupValidation(
+  inputOfDegree,
+  alertInputOfDegree,
+  "Please, Enter your degree",
+  40,
+  "Text too large",
+  2,
+  "text too short",
+  "$@@",
+  "",
+) 
+
+
 
 //--------------------------------------- fifth section  ---------------------------------------------------------
 
@@ -363,6 +396,79 @@ haveInfoYesOrNo (
   formOfPharmacyLicense
 ) 
 
+const LicenseNumber = document.querySelector("#license-number");
+const alertLicenseNumber = document.querySelector("#alert-license-number")
+
+
+setupValidation(
+  LicenseNumber,
+  alertLicenseNumber,
+  "Please, enter your license number",
+  20,
+  "the numbers must be less than 20",
+  5,
+  "numbers too short",
+  "dfds3E3DE@@",
+  "",
+)
+
+const dateExpiration = document.querySelector("#date-expiration");
+const alertDateExpiration = document.querySelector("#alert-date-expiration");
+
+let dateExpirationToggle = false;
+
+// Helper function to parse YYYY-MM-DD cleanly as local midnight
+function parseLocalDate(dateString) {
+  if (!dateString) return null;
+  const [year, month, day] = dateString.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
+// Helper function to get today at 00:00:00
+function getTodayMidnight() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today;
+}
+
+dateExpiration.addEventListener("blur", () => {
+  dateExpirationToggle = true;
+
+  const instantiationDateExpiration = parseLocalDate(dateExpiration.value);
+  const todaysDate = getTodayMidnight();
+
+  if (!instantiationDateExpiration || isNaN(instantiationDateExpiration.getTime())) {
+    // Handle empty or invalid input
+    dateExpiration.style.border = "";
+    alertDateExpiration.textContent = "";
+    return;
+  }
+
+  if (todaysDate >= instantiationDateExpiration) {
+    dateExpiration.style.border = "2px solid red";
+    alertDateExpiration.textContent = "Your license has already expired";
+  } else {
+    dateExpiration.style.border = "2px solid green";
+    alertDateExpiration.textContent = "";
+  }
+
+  dateExpiration.style.outline = "";
+});
+
+dateExpiration.addEventListener("input", () => {
+  if (!dateExpirationToggle) return;
+
+  const instantiationDateExpiration = parseLocalDate(dateExpiration.value);
+  const todaysDate = getTodayMidnight();
+
+  if (instantiationDateExpiration && instantiationDateExpiration > todaysDate) {
+    dateExpiration.style.border = "2px solid green";
+    alertDateExpiration.textContent = "";
+  }
+
+  dateExpiration.style.outline = "none";
+});
+
 //--------------------------------------- sixth section  ---------------------------------------------------------
 
 //--------------------------------------- seventh section  ---------------------------------------------------------7 Work Experience
@@ -376,6 +482,53 @@ haveInfoYesOrNo (
   workExperienceNo,
   formOfWorkExperience
 ) 
+
+  const pharmacyName = document.querySelector("#pharmacy-name");
+  const alertPharmacyName = document.querySelector("#alert-pharmacy-name");
+
+  setupValidation(
+  pharmacyName,
+  alertPharmacyName,
+  "Please, fill this field",
+  50,
+  "text too long",
+  1,
+  "text too short",
+  "38dheaa",
+  "",
+)
+
+  const position = document.querySelector("#position");
+  const alertPosition = document.querySelector("#alert-position");
+
+  setupValidation(
+  position,
+  alertPosition,
+  "Please, fill this field",
+  50,
+  "text too long",
+  1,
+  "text too short",
+  "38dheaa",
+  "",
+)
+
+  const yearsExperience = document.querySelector("#years-experience");
+  const alertYearsExperience = document.querySelector("#alert-years-experience");
+  
+  setupValidation(
+  yearsExperience,
+  alertYearsExperience,
+  "",
+  50,
+  "",
+  0,
+  "",
+  "38dheaa44",
+  "",
+)
+
+
 
 
 //--------------------------------------- seventh section  ---------------------------------------------------------

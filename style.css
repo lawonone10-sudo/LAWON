@@ -117,6 +117,9 @@ body {
   font-size: 15px;
 }
 
+.hidden {
+  display: none !important;
+}
 
 
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^ styles helpfully ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
@@ -210,6 +213,10 @@ body {
 
 /*55555555555555555555555 FIFTH SECTION STYLE 5555555555555555555555555555555 */
 
+#graduation-information {
+  display: none;
+}
+
 #select-kind-of-degree {
   width: 13rem;
   height: 25px;
@@ -218,12 +225,16 @@ body {
 #input-of-degree {
   width: 12rem;
   height: 23px;
-  margin-top: 10px;
+  margin-top: 0;
+
 }
 
-#graduation-information {
-  display: none;
+#container-of-specify-degree {
+  display: flex;
+  flex-direction: column;
+
 }
+
 
 /* when the user click an option it gonna display more form to refil if he click another option distint that is gonna display more forms to refil for info*/
 /*55555555555555555555555 FIFTH SECTION STYLE 5555555555555555555555555555555 */
@@ -240,6 +251,15 @@ body {
 
 }
 
+#alert-license-number, #alert-date-expiration {
+  margin-top: 5px;
+  margin-left: 10rem;
+}
+
+#alert-date-expiration {
+  margin-top: 5px;
+  margin-left: 9.7rem;
+}
 
 /*6666666666666666666666 SIXTH SECTION STYLE 66666666666666666666666666666666 */
 
@@ -253,6 +273,19 @@ body {
   display: none;
   margin-top: 1rem;
 }
+#alert-pharmacy-name {
+  margin-top: 5px;
+}
+
+#alert-position {
+  margin-top: 5px;
+}
+
+#alert-years-experience {
+  margin-top: 5px;
+  
+}
+
 
 /*777777777777777777777 seventh section style 777777777777777777777777777777 */
 
