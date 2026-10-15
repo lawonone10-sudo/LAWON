@@ -56,26 +56,14 @@ function setupValidation(
   });
 }
 
-
-function haveInfoYesOrNo (
-  yes,
-  no,
-  container
-) {
-
+function haveInfoYesOrNo(yes, no, container) {
   yes.addEventListener("change", () => {
-
     container.style.display = "flex";
-
-  })
+  });
 
   no.addEventListener("change", () => {
-
     container.style.display = "none";
-
-  })
-
-
+  });
 }
 
 // goal: now how reusable the function and how does that work how to code it.
@@ -294,14 +282,11 @@ setupValidation(
 const typesOfID = document.querySelectorAll("input[name='types-of-id']");
 const collectID = document.querySelector("#container-id-number");
 
-typesOfID.forEach(id => {
-
-   id.addEventListener("change", () => {
-
-  collectID.style.display = "flex"; 
-
-})
-})
+typesOfID.forEach((id) => {
+  id.addEventListener("change", () => {
+    collectID.style.display = "flex";
+  });
+});
 
 const idNumber = document.querySelector("#id-number");
 const alertIdNumber = document.querySelector("#alert-id-number");
@@ -316,8 +301,7 @@ setupValidation(
   "id too short",
   "@",
   "",
-)
-
+);
 
 //--------------------------------------- fourth section  ---------------------------------------------------------
 
@@ -327,11 +311,7 @@ const graduateYes = document.querySelector("#graduate-yes");
 const graduateNo = document.querySelector("#graduate-no");
 const graduationInfo = document.querySelector("#graduation-information");
 
-haveInfoYesOrNo (
-  graduateYes,
-  graduateNo,
-  graduationInfo
-) 
+haveInfoYesOrNo(graduateYes, graduateNo, graduationInfo);
 
 const universityName = document.querySelector("#university-name");
 const alertUniversityName = document.querySelector("#alert-university-name");
@@ -346,26 +326,24 @@ setupValidation(
   "Text to short",
   "@$",
   "",
-) 
- 
+);
+
 const selectKindOfDegree = document.querySelector("#select-kind-of-degree");
-const containerOfSpecifyDegree = document.querySelector("#container-of-specify-degree");
+const containerOfSpecifyDegree = document.querySelector(
+  "#container-of-specify-degree",
+);
 
 selectKindOfDegree.addEventListener("change", () => {
-
   if (selectKindOfDegree.value === "other-kind-of-degree") {
-
-    containerOfSpecifyDegree.classList = ""
+    containerOfSpecifyDegree.classList = "";
   }
   if (selectKindOfDegree.value !== "other-kind-of-degree") {
-
     containerOfSpecifyDegree.classList = "hidden";
   }
-})
+});
 
 const inputOfDegree = document.querySelector("#input-of-degree");
 const alertInputOfDegree = document.querySelector("#alert-input-of-degree");
-
 
 setupValidation(
   inputOfDegree,
@@ -377,28 +355,22 @@ setupValidation(
   "text too short",
   "$@@",
   "",
-) 
-
-
+);
 
 //--------------------------------------- fifth section  ---------------------------------------------------------
-
 
 //--------------------------------------- sixth section  ---------------------------------------------------------6 Pharmacy License
 
 const pharmacyLicenseYes = document.querySelector("#yes-pharmacy-license");
 const pharmacyLicenseNo = document.querySelector("#no-pharmacy-license");
-const formOfPharmacyLicense = document.querySelector("#extra-form-pharmacy-license");
+const formOfPharmacyLicense = document.querySelector(
+  "#extra-form-pharmacy-license",
+);
 
-haveInfoYesOrNo (
-  pharmacyLicenseYes,
-  pharmacyLicenseNo,
-  formOfPharmacyLicense
-) 
+haveInfoYesOrNo(pharmacyLicenseYes, pharmacyLicenseNo, formOfPharmacyLicense);
 
 const LicenseNumber = document.querySelector("#license-number");
-const alertLicenseNumber = document.querySelector("#alert-license-number")
-
+const alertLicenseNumber = document.querySelector("#alert-license-number");
 
 setupValidation(
   LicenseNumber,
@@ -410,7 +382,7 @@ setupValidation(
   "numbers too short",
   "dfds3E3DE@@",
   "",
-)
+);
 
 const dateExpiration = document.querySelector("#date-expiration");
 const alertDateExpiration = document.querySelector("#alert-date-expiration");
@@ -437,7 +409,10 @@ dateExpiration.addEventListener("blur", () => {
   const instantiationDateExpiration = parseLocalDate(dateExpiration.value);
   const todaysDate = getTodayMidnight();
 
-  if (!instantiationDateExpiration || isNaN(instantiationDateExpiration.getTime())) {
+  if (
+    !instantiationDateExpiration ||
+    isNaN(instantiationDateExpiration.getTime())
+  ) {
     // Handle empty or invalid input
     dateExpiration.style.border = "";
     alertDateExpiration.textContent = "";
@@ -477,16 +452,12 @@ const workExperienceYes = document.querySelector("#yes-work-experience");
 const workExperienceNo = document.querySelector("#no-work-experience");
 const formOfWorkExperience = document.querySelector("#form-of-work-experience");
 
-haveInfoYesOrNo (
-  workExperienceYes,
-  workExperienceNo,
-  formOfWorkExperience
-) 
+haveInfoYesOrNo(workExperienceYes, workExperienceNo, formOfWorkExperience);
 
-  const pharmacyName = document.querySelector("#pharmacy-name");
-  const alertPharmacyName = document.querySelector("#alert-pharmacy-name");
+const pharmacyName = document.querySelector("#pharmacy-name");
+const alertPharmacyName = document.querySelector("#alert-pharmacy-name");
 
-  setupValidation(
+setupValidation(
   pharmacyName,
   alertPharmacyName,
   "Please, fill this field",
@@ -496,12 +467,12 @@ haveInfoYesOrNo (
   "text too short",
   "38dheaa",
   "",
-)
+);
 
-  const position = document.querySelector("#position");
-  const alertPosition = document.querySelector("#alert-position");
+const position = document.querySelector("#position");
+const alertPosition = document.querySelector("#alert-position");
 
-  setupValidation(
+setupValidation(
   position,
   alertPosition,
   "Please, fill this field",
@@ -511,12 +482,12 @@ haveInfoYesOrNo (
   "text too short",
   "38dheaa",
   "",
-)
+);
 
-  const yearsExperience = document.querySelector("#years-experience");
-  const alertYearsExperience = document.querySelector("#alert-years-experience");
-  
-  setupValidation(
+const yearsExperience = document.querySelector("#years-experience");
+const alertYearsExperience = document.querySelector("#alert-years-experience");
+
+setupValidation(
   yearsExperience,
   alertYearsExperience,
   "",
@@ -526,15 +497,11 @@ haveInfoYesOrNo (
   "",
   "38dheaa44",
   "",
-)
-
-
-
+);
 
 //--------------------------------------- seventh section  ---------------------------------------------------------
 
 //--------------------------------------- eighth section  ---------------------------------------------------------8 Skills
-
 
 //--------------------------------------- eighth section  ---------------------------------------------------------
 
@@ -544,15 +511,30 @@ const otherLanguage = document.querySelector("#other-language");
 const inputOfLanguage = document.querySelector("#input-of-language");
 
 otherLanguage.addEventListener("change", () => {
-
   inputOfLanguage.classList.toggle("hidden", !otherLanguage.checked);
-})
+});
 
+const alertInputOfLanguege = document.querySelector("#alert-input-of-languega");
 
+setupValidation(
+  inputOfLanguage,
+  alertInputOfLanguege,
+  "Please, fill this field",
+  1000,
+  "",
+  0,
+  "",
+  "38dheaa44",
+  "",
+);
 
 //--------------------------------------- ninth section  ---------------------------------------------------------
 
 //--------------------------------------- tenth section  ---------------------------------------------------------10 Final Review & Submit
+
+const DateofSubmit = document.querySelector("#date-of-submit");
+const alertDateofSubmit = document.querySelector("#alert-date-of-submit");
+
 const buttonSubmit = document.querySelector("#button-submit");
 
 buttonSubmit.addEventListener("click", () => {});

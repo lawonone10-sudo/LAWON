@@ -84,8 +84,6 @@ body {
   justify-content: center;
 }
 
-
-
 .container-of-yes {
   display: flex;
   flex-direction: column;
@@ -120,7 +118,6 @@ body {
 .hidden {
   display: none !important;
 }
-
 
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^ styles helpfully ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
@@ -189,12 +186,11 @@ body {
 
 /*44444444444444444444444 FOURTH SECTION STYLE 444444444444444444444444444444 */
 
-#container-id-number {        
+#container-id-number {
   display: none;
   flex-direction: column;
   gap: 8px;
 }
-
 
 #id-number {
   width: 9rem;
@@ -226,15 +222,12 @@ body {
   width: 12rem;
   height: 23px;
   margin-top: 0;
-
 }
 
 #container-of-specify-degree {
   display: flex;
   flex-direction: column;
-
 }
-
 
 /* when the user click an option it gonna display more form to refil if he click another option distint that is gonna display more forms to refil for info*/
 /*55555555555555555555555 FIFTH SECTION STYLE 5555555555555555555555555555555 */
@@ -248,10 +241,10 @@ body {
 
 #extra-form-pharmacy-license {
   display: none;
-
 }
 
-#alert-license-number, #alert-date-expiration {
+#alert-license-number,
+#alert-date-expiration {
   margin-top: 5px;
   margin-left: 10rem;
 }
@@ -283,9 +276,7 @@ body {
 
 #alert-years-experience {
   margin-top: 5px;
-  
 }
-
 
 /*777777777777777777777 seventh section style 777777777777777777777777777777 */
 
@@ -309,14 +300,19 @@ body {
 
 #container-other-lenguage {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
-#input-of-lenguage {
-  width: 8rem;
+#input-of-language {
+  width: 7rem;
   height: 1.2rem;
 }
 
+#alert-input-of-languega {
+  margin-top: 5px;
+}
 /*999999999999999999999 NINTH SECTION STYLE 99999999999999999999999999999999 */
 
 /*1010101010101010101010 TENTH SECTION STYLE 1010101010101010101010101010010 */
@@ -343,8 +339,11 @@ body {
 }
 
 #date-of-submit {
-  margin-bottom: 1.2rem;
   margin-top: 0.5rem;
+}
+
+#alert-date-of-submit {
+  margin: 5px 0 0.5rem 8.1rem;
 }
 
 #button-submit {
