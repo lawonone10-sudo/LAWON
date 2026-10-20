@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <div id="container-of-form-validation">
+          <section id="first-section-title" class="style-of-section">
+            <div id="head-of-first-section" class="head-of-section">
+              <h1 class="title-style">🏥Pharmacy Employment Form</h1>
+              <p id="p-style-of-title">
+                Please complete all required fields marked with *.
+              </p>
+            </div>
+          </section>
+          <section id="second-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">👤 Personal Information</h1>
+            </div>
+
+            <div class="body-of-section">         
+              <div class="align-items">
+                <label class="text-style field-required" for="first-name"
+                  >First Name *
+                  <input
+                    name="first-name"
+                    class="input-style"
+                    id="first-name"
+                    type="text"
+                    placeholder="Required"
+                    required
+                  />
+                </label>
+                <p id="alert-first-name" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label class="text-style" for="middle-name"
+                  >Middle Name *
+                  <input
+                    name="middle-name"
+                    class="input-style"
+                    id="middle-name"
+                    type="text"
+                    placeholder="Required"
+                    required
+                  />
+                </label>
+                <p id="alert-middle-name" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label class="text-style" for="last-name"
+                  >Last Name *
+                  <input
+                    name="last-name"
+                    class="input-style"
+                    id="last-name"
+                    type="text"
+                    placeholder="Required"
+                    required
+                  />
+                </label>
+                <p id="alert-last-name" class="alert-p"></p>
+              </div>
+
+              <div class="align-items" id="container-date-of-birth">
+                <label class="text-style" for="date-of-birth">
+                  Date of Birth *
+                  <input
+                    name="date-of-birth"
+                    id="date-of-birth"
+                    class="input-style"
+                    type="date"
+                    required
+                  />
+                </label>
+                <p id="alert-date-of-birth" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label class="text-style" for="age"
+                  >Age
+                  <input
+                    class="input-style"
+                    id="age"
+                    type="number"
+                    min="18"
+                    max="80"
+                    placeholder="Age"
+                    required
+                  />
+                </label>
+                <p id="alert-age" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label for="gender" class="text-style">Gender * 
+                <select name="gender" id="gender">
+                  <option id="Male" class="style-options">Male</option>
+                  <option id="Female" class="style-options">Female</option>
+                  <option id="Other" class="style-options">Other</option>
+                  </label>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <section id="third-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">📞 Contact Information</h1>
+            </div>
+
+            <div class="body-of-section">
+              <div class="align-items">
+                <label class="text-style" for="phone-number"
+                  >Phone Number *</label
+                >
+                <input
+                  name="phone-number"
+                  class="input-style"
+                  id="phone-number"
+                  type="tel"
+                  pattern="[0-9]{10}"
+                  placeholder="6151234567"
+                  maxlength="10"
+                  required
+                />
+                <p id="alert-phone-number" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label class="text-style" for="email-address"
+                  >Email address *</label
+                >
+                <input
+                  name="email-address"
+                  id="email-address"
+                  type="text"
+                  placeholder="Example@gmail.com"
+                  required
+                />
+                <p id="alert-email-address" class="alert-p"></p>
+              </div>
+
+              <div class="align-items">
+                <label class="text-style" for="home-address"
+                  >Home Address *</label
+                >
+                <textarea
+                  name="home-address"
+                  id="home-address"
+                  placeholder="123 Main St, Orlando, FL 32801"
+                  required
+                ></textarea>
+              </div>
+              <p id="alert-home-address" class="alert-p"></p>
+            </div>
+          </section>
+
+          <section id="fourth-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">🪪 Identification</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>Identification Type *</h2>
+              <div id="identification-type">
+                <label class="text-style" for="driver's-license">
+                  <input name="types-of-id" id="driver's-license" type="radio" />
+                  Driver's License
+                </label>
+
+                <label class="text-style" for="State-ID">
+                  <input name="types-of-id" id="State-ID" type="radio" />
+                  State ID 
+                </label>
+
+                <label class="text-style" for="passport">
+                  <input name="types-of-id" id="passport" type="radio" />
+                  Passport
+                </label>
+              </div>  
+
+              <div id="container-id-number">
+                <label class="text-style" for="id-number">ID Number
+                  <input
+                    name="id-type"
+                     id="id-number"
+                     type="number"
+                    placeholder="Enter your ID number"
+                  />
+                </label>
+                <p id="alert-id-number" class="alert-p"></p>   
+              </div>     
+            </div>
+          </section>
+
+          <section id="fifth-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">🎓 Education</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>High School Graduate?</h2>
+              <div class="container-options">
+                <label class="text-style" for="graduate-yes">
+                  <input
+                    name="graduate-options"
+                    id="graduate-yes"
+                    type="radio"
+                  />
+                  Yes
+                </label>
+                <label class="text-style" for="graduate-no">
+                  <input
+                    name="graduate-options"
+                    id="graduate-no"
+                    type="radio"
+                  />
+                  No
+                </label>
+              </div>
+              <div id="graduation-information" class="container-of-yes">
+                <label class="text-style" for="university-name">
+                  University Name *
+                  <input
+                    name="university-name"
+                    id="university-name"
+                    class="input-style"
+                    placeholder="Harvard"
+                    required
+                  />
+                </label>
+                <p id="alert-university-name" class="alert-p"></p>
+
+              <div id="container-of-kind-of-degree">
+                <label class="text-style" for="select-kind-of-degree"
+                  >Degree *</label
+                >
+                <select id="select-kind-of-degree" required>
+                  <option>Doctor of Pharmacy (PharmD)</option>
+                  <option>Bachelor of Science in Pharmacy</option> 
+                  <option>Pharmacy Technician Certificate</option>
+                  <option>Associate Degree</option>
+                  <option>Master's Degree</option>
+                  <option value="other-kind-of-degree">Other</option>
+                </select>
+              </div>
+            
+
+                <div id="container-of-specify-degree" class="hidden">
+                  <label class="text-style" for="input-of-degree"
+                    >Please specify your degree</label
+                  >
+                  <br />
+                  <input id="input-of-degree" />
+                  <p id="alert-input-of-degree" class="alert-p"></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="sixth-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">📜 Pharmacy License</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>Do you have a Pharmacy License? *</h2>
+              <div class="container-options">
+                <label class="text-style" for="yes-pharmacy-license">
+                  <input
+                    name="pharmacy-license"
+                    id="yes-pharmacy-license"
+                    type="radio"
+                  />Yes
+                </label>
+
+                <label class="text-style" for="no-license">
+                  <input
+                    name="pharmacy-license"
+                    id="no-pharmacy-license"
+                    type="radio"
+                  />No
+                </label>
+              </div>
+              <div id="extra-form-pharmacy-license" class="container-of-yes">
+                <label class="text-style" for="license-number">
+                  License Number *
+                  <input
+                    name="license-number"
+                    id="license-number"
+                    placeholder="Example: RPH987654"
+                  />
+                  <p id="alert-license-number" class="alert-p"></p>
+                </label>
+                
+                <label class="text-style" for="PL-expiration">
+                  Date Expiration *
+                  <input
+                    name="date-expiration"
+                    id="date-expiration"
+                    type="date"
+                  />
+
+                  <p id="alert-date-expiration" class="alert-p"></p>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section id="seventh-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">💼 Work Experience</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>Have you worked in a pharmacy before?</h2>
+              <div class="container-options">
+                <label class="text-style" for="yes-work-experience">
+                  <input
+                    name="work-experience?"
+                    id="yes-work-experience"
+                    type="radio"
+                  />
+                  Yes
+                </label>
+
+                <label class="text-style" for="no-work-experience">
+                  <input
+                    name="work-experience?"
+                    id="no-work-experience"
+                    type="radio"
+                  />
+                  No
+                </label>
+              </div>
+              <div id="form-of-work-experience">
+                <label class="text-style" for="pharmacy-name">
+                  Pharmacy Name *
+                  <input
+                    name="pharmacy-name"
+                    id="pharmacy-name"
+                    class="input-style"
+                    type="text"
+                    placeholder="Pharmacy"
+                  />
+                  <p id="alert-pharmacy-name" class="alert-p"></p>
+                </label>
+                
+                
+                <label class="text-style" for="position">
+                  Position *
+                  <input
+                    name="position"
+                    id="position"
+                    type="text"
+                    class="input-style"
+                    placeholder="manager"
+                  />
+                  <p id="alert-position" class="alert-p"></p>
+                </label>
+                <label class="text-style" for="years-experience">
+                  Years Experience *
+                  <input
+                    name="years-experience"
+                    id="years-experience"
+                    type="number"
+                  />
+                  <p id="alert-years-experience" class="alert-p"></p>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section id="eighth-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">💊 Skills</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>choose your specialities *</h2>
+              <div id="pharmacy-skills">
+                <label class="text-style" for="customer-service">
+                  <input
+                    name="skills-checkboxes"
+                    id="customer-service"
+                    type="checkbox"
+                    value="customer-service"
+                  />
+                  Customer Service
+                </label>
+                <label class="text-style" for="inventory-management">
+                  <input
+                    name="skills-checkboxes"
+                    id="inventory-management"
+                    type="checkbox"
+                    value="inventory-management"
+                  />
+                  Inventory Management
+                </label>
+                <label class="text-style" for="computer-skills">
+                  <input
+                    name="skills-checkboxes"
+                    id="computer-skills"
+                    type="checkbox"
+                    value="computer-skills"
+                  />
+                  Computer Skills
+                </label>
+                <label class="text-style" for="prescription-data-entry">
+                  <input
+                    name="skills-checkboxes"
+                    id="prescription-data-entry"
+                    type="checkbox"
+                    value="prescription-data=entry"
+                  />
+                  Prescription Data Entry
+                </label>
+                <label class="text-style" for="insurance-processing">
+                  <input
+                    name="skills-checkboxes"
+                    id="insurance-processing"
+                    type="checkbox"
+                    value="insurance-processing"
+                  />
+                  Insurance Processing
+                </label>
+                <label class="text-style" for="cash-register">
+                  <input
+                    name="skills-checkboxes"
+                    id="cash-register"
+                    type="checkbox"
+                    value="cash-register"
+                  />
+                  Cash Register
+                </label>
+                <label class="text-style" for="counting-medication">
+                  <input
+                    name="skills-checkboxes"
+                    id="counting-medication"
+                    type="checkbox"
+                    value="counting-medication"
+                  />
+                  Counting Medication
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section id="ninth-section" class="style-of-section">
+            <div class="head-of-section">
+              <h1 class="title-style">🌎 Languages</h1>
+            </div>
+            <div class="body-of-section">
+              <div id="container-of-lenguage">
+                <label class="text-style" for="english">
+                  <input
+                    name="lenguages-checkboxes"
+                    id="english"
+                    type="checkbox"
+                    value="english"
+                  />
+                  English
+                </label>
+                <label class="text-style" for="spanish">
+                  <input
+                    name="lenguages-checkboxes"
+                    id="spanish"
+                    type="checkbox"
+                    value="spanish"
+                  />
+                  Spanish
+                </label>
+                <div id="container-other-lenguage">
+                  <label class="text-style" for="other-lenguage">
+                    <input
+                      name="lenguages-checkboxes"
+                      id="other-language"
+                      type="checkbox"
+                      value="other-language"
+                    />
+                    other(s):
+                  </label>
+                  <input
+                    name="input-of-language"
+                    id="input-of-language"
+                    class="hidden"
+                    placeholder="Portugues"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tenth-section" class="style-of-section">
+            <div id="tenth-head-of-section" class="head-of-section">
+              <h1 class="title-style">📄 Final Review & Submit</h1>
+            </div>
+            <div class="body-of-section">
+              <h2>📄 Final Review</h2>
+
+              <div id="condition-before-submit"></div>
+
+              <label class="text-style" for="employer-certify-info">
+                <input
+                  name="final-review"
+                  id="employer-certify-info"
+                  type="checkbox"
+                />
+                I certify that all the information I have provided is true and
+                complete to the best of my knowledge.
+              </label>
+
+              <label
+                class="text-style"
+                for="employer-understand-about-false-info"
+              >
+                <input
+                  name="final-review"
+                  id="employer-understand-about-false-info"
+                  type="checkbox"
+                />
+                I understand that providing false information may result in the
+                rejection of my application.
+              </label>
+            </div>
+
+            <label class="text-style" for="date-of-submit">
+              Today's Date *
+              <input
+                name="date-of-submit"
+                id="date-of-submit"
+                class="input-style"
+                type="date"
+                required
+              />
+            </label>
+
+            <label class="text-style" for="signature">
+              Signature *
+              <input
+                name="signature"
+                id="signature"
+                class="input-style"
+                required
+              />
+            </label>
+
+            <div id="submit-all-info">
+              <button type="submit" id="button-submit">
+                Submit Application
+              </button>
+              <p id="p-agree-to-submit">
+                By clicking "Submit Application," you agree that the information
+                provided is accurate and may be verified by the employer.
+              </p>
+            </div>
+            <div id="info-that-didnt-fill">
+              <h2>You need to fill in this information.</h2>
+              <ol></ol>
+            </div>
+          </section>
+        </div>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
